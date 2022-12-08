@@ -1,4 +1,4 @@
-# GitHub Stars Visualizer
+# GitStars
 
 A web service that allows you to visualize top starred projects on Github.
 
