@@ -6,11 +6,8 @@ projects on GitHub
 
 from server.app import app
 from flask import abort, jsonify, request, make_response
-from flask_cors import CORS, cross_origin
 import json
 import requests
-CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
 
 url = "https://api.github.com/"
 header = {
@@ -21,7 +18,6 @@ sort = ">10&sort=stars&per_page=100"
 
 
 @app.route("/top_starred_repos", methods=["GET"], strict_slashes=True)
-@cross_origin
 def get_top_starred_repos():
     """
     This endpoint returns top starred repositories
@@ -51,7 +47,6 @@ def get_top_starred_repos():
 
 
 @app.route("/language/<language>", methods=["GET"], strict_slashes=True)
-@cross_origin
 def get_stars_by_language(language):
     """ This endpoint returns top starred projects by language """
 
@@ -128,7 +123,6 @@ def get_stars_by_language(language):
 
 
 @app.route("/owners", methods=["GET"], strict_slashes=True)
-@cross_origin
 def get_repo_owner():
     """ This endpoint return info on the owner/organization of a requested repo """
     search_owner = "{}users?q=stars:{}".format(url, sort)
