@@ -1,4 +1,6 @@
 import React from 'react'
+// import for header component
+import {Header} from './header'
 // images for hero section
 import search from '../images/search.svg';
 import explore from '../images/explore.svg';
@@ -8,35 +10,42 @@ import line from '../images/horizontal-line.svg';
 import bar from '../images/bar-chart.svg';
 import linechart from '../images/line-chart.svg';
 import pie from '../images/pie-chart.svg';
+import hero from '../images/hero.svg';
+// import for react router
+import { useNavigate } from 'react-router-dom';
 
 
 
 export const LandingPage = () => {
+  const navigate = useNavigate();
   return (
-    <div className=' space-y-20'>
-      <article className='hero-section h-screen mb-10 space-y-14'>
-        <h1 className='hero-leading text-6xl font-bold'>
-          Explore like never before <br></br>
-          Made for Developers, <span id='hero-span'>by Developers.</span>
-        </h1>
-        <button className='explore-button'>
-          Get Started
-        </button>
-      </article>
+    <>
+    <Header/>
+    <div className='space-y-20 px-10'>
+        <article className='hero-section h-screen mb-10 space-y-14'>
+          <h1 className='hero-leading text-5xl font-bold'>
+            Explore like never before <br></br>
+            Made for Developers, <span id='hero-span'>by Developers.</span>
+          </h1>
+          <button className='explore-button' onClick={() => navigate('/explore')}>
+            Get Started
+          </button>
+          <img src={hero} className="hero-image" alt='heroimage' />
+        </article>
       {/* About us section */}
       <div className='about-section'>
         <h1 className='text-center text-3xl'>
           Visualise your preferred language by repositories
         </h1>
-        <article className='flex justify-evenly flex-row items-center w-90% space-x-4 p-10'>
+        <article className='flex justify-evenly flex-row items-center w-90% space-x-4 p-18 mt-6'>
           <div className='graph-container flex justify-center items-center'>
-            <img src={bar} alt="bar-chart" height={150} width={150} />
+            <img src={bar} alt="bar-chart" height={120} width={120} />
           </div>
           <div className='graph-container flex justify-center items-center'>
-            <img src={linechart} alt="line-chart" height={150} width={150} />
+            <img src={linechart} alt="line-chart" height={120} width={120} />
           </div>
           <div className='graph-container flex justify-center items-center'>
-            <img src={pie} alt="pie-chart" height={150} width={150} />
+            <img src={pie} alt="pie-chart" height={120} width={120} />
           </div>
         </article>
       </div>
@@ -48,7 +57,7 @@ export const LandingPage = () => {
           favourite programming languages by familiarising with popular repositories.
         </p>
       </article>
-      <div class="blankDiv">
+      <div className="blankDiv">
       </div>
       {/* Get Started section */}
       <article className='get-started flex justify-center flex-col items-center w-100% space-y-6 p-8'>
@@ -76,12 +85,13 @@ export const LandingPage = () => {
         </div>
       </article>
       <div className='text-center'>
-        <button className='explore-button'>
+        <button className='explore-button' onClick={()=>navigate('/explore')}>
           Get Started
         </button>
       </div>
 
     </div>
+    </>
   )
 }
 

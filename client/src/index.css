@@ -23,6 +23,7 @@ body{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 .header.shadow{
@@ -33,7 +34,6 @@ body{
 .navlinks > li {
   margin: 0rem 1rem 0rem 1rem;
   font-weight: 500;
-  font-size: 1.4rem;
 }
 
 .navlinks > li:hover{
@@ -53,7 +53,6 @@ body{
 }
 
 .hero-section{
-  background-image: url('./images/hero.svg');
   background-repeat: no-repeat;
   background-position: right;
   background-position-y: 90%;
@@ -79,6 +78,10 @@ body{
   height: 2rem;
   border-radius: 2.2rem;
   color: #ffffff;
+}
+
+.hero-image{
+  margin-left: 45%;
 }
 
 .explore-button{
@@ -130,9 +133,7 @@ body{
   color: #053BED;
 }
 
-.get-started > p {
- 
-}
+
 
 .feature-section{
   background: #053BED;
@@ -170,7 +171,62 @@ body{
 .graph-container{
   box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
   background-color:#fff;
-  height: 20em;
-  width: 20em;
-  border-radius: 2em;
+  height: 16em;
+  width: 16em;
+  border-radius: 1.6em;
+}
+
+.explore-container {
+  margin-top: 4.2rem;
+  padding: 2rem;
+  height: 82%;
+}
+
+.bargraph-container {
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  height: 24em;
+  width: 42em;
+  border-radius: 1.6em;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.about-container{
+  margin-top: 4.2rem;
+  padding: 2rem;
+}
+
+.contact-container{
+  margin-top: 4rem;
+  padding: 2.4rem;
+  height: 100%;
+  background-color: #edf2fb;
+}
+
+#error-image{
+  height: 18rem;
+}
+
+.form-container{
+  height: auto;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1rem;
+  padding: 2.6rem;
+}
+
+.submit-button{
+  background-color: #053BED;
+}
+.submit-button:hover{
+  opacity: 90%;
+}
+.contact-h1{
+  letter-spacing: 0.3rem;
+  color:#053BED;
 }
