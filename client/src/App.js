@@ -1,5 +1,6 @@
 // component imports
 import {LandingPage} from './components/landingPage'
+import {LanguageExplore} from './components/languageExplore'
 import {Explore} from './components/explore'
 import {About} from './components/about'
 import {Contact} from './components/contact'
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/explore' element={<Explore/>}/>
+        <Route path='/explore/:id' element={<LanguageExplore/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path="*" element={<Error/>}/>
