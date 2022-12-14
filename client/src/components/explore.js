@@ -72,7 +72,8 @@ export const Explore = () => {
                           placeholder="Enter preferred programming language e.g Python, TypeScript, Javascript....."
                           onChange={(event)=> {
                             setSearchTerm(event.target.value);
-                          }}/>
+                          }}
+                          required/>
                             <button  onClick={handleSubmit} type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                       </div>
                   </form>
@@ -97,7 +98,7 @@ export const Explore = () => {
                           {
                               allTopStarredRepos.map((each) => 
                                   <div key={each.repo_name} className='list-container mt-8 shadow-lg rounded-lg w-full flex flex-row justify-between items-center p-6'>
-                                      <div className='flex flex-col items-center space-x-4'>
+                                      <div className='flex flex-col flex-start items-center space-x-4'>
                                           <h1 id="repo-name">{each.repo_name}</h1>
                                           <div className='flex flex-row justify-between items-center'>
                                               <h2>Total Stars: {each.total_stars}</h2>

@@ -300,3 +300,13 @@ body{
 #view-span, #repo-name{
   color:#053BED;
 }
+
+.reason-container{
+  background-color: #edede9;
+  margin: 4.2rem 0;
+  height: 30rem;
+}
+
+.footer-text{
+  color:#053BED;
+}

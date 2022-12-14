@@ -70,7 +70,7 @@ export const LanguageExplore = () => {
                               {
                                   languageRepos.map((each) =>
                                       <div key={each.repo_name} className='list-container mt-8 shadow-lg rounded-lg w-full flex flex-row justify-between items-center p-6'>
-                                          <div className='flex flex-col items-center space-x-4'>
+                                          <div className='flex flex-col flex-start items-center space-x-4'>
                                               <h1 id="repo-name">{each.repo_name}</h1>
                                               <div className='flex flex-row justify-between items-center'>
                                                   <h2>Total Stars: {each.total_stars}</h2>
