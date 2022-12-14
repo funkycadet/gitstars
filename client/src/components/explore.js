@@ -81,7 +81,7 @@ export const Explore = () => {
                   {loading ? <Loading /> :
                       <div className='bargraph-container'>
                           <h1 className='text-3xl mb-4'>
-                              Top Starred Repositories
+                              Top Starred Repositories on Github
                           </h1>
                           <Bar
                               data={state}
@@ -104,10 +104,12 @@ export const Explore = () => {
                                               <img src={stars} alt="Rating" height="30px" width="40px" />
                                           </div>
                                       </div>
-                                      <button className="font-bold py-2 px-4 rounded inline-flex items-center space-x-1">
-                                          <img src={view} alt="See Repo" height="20px" width="20px" />
-                                          <span id="view-span">View</span>
-                                      </button>
+                                      <a href={each.repo_url} target="_blank" rel="noreferrer" >
+                                              <button className="font-bold py-2 px-4 rounded inline-flex items-center space-x-1">
+                                                  <img src={view} alt="See Repo" height="20px" width="20px" />
+                                                  <span id="view-span">View</span>
+                                              </button>
+                                        </a>
                                   </div>
 
                               )

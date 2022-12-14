@@ -5,7 +5,7 @@ import {Header} from './header';
 import previous from "../images/previous-svgrepo-com.svg"
 import stars from '../images/stars.png';
 import view from '../images/eye-svgrepo-com.svg';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 import { Bar } from 'react-chartjs-2';
 
 
@@ -46,6 +46,11 @@ export const LanguageExplore = () => {
         // console.log(params);
     }, [ params.lang]);
 
+    // const handleView = (repo_url) => {
+    //     console.log(repo_url)
+
+    // }
+
   return (
     <>
           <div className='h-auto w-full flex flex-col justify-center'>
@@ -72,12 +77,14 @@ export const LanguageExplore = () => {
                                                   <img src={stars} alt="Rating" height="30px" width="40px" />
                                               </div>
                                           </div>
-                                          <button className="font-bold py-2 px-4 rounded inline-flex items-center space-x-1">
-                                              <img src={view} alt="See Repo" height="20px" width="20px" />
-                                              <span id="view-span">View</span>
-                                          </button>
+                                          <a href={each.repo_link} target="_blank" rel="noreferrer" >
+                                              <button className="font-bold py-2 px-4 rounded inline-flex items-center space-x-1">
+                                                  <img src={view} alt="See Repo" height="20px" width="20px" />
+                                                  <span id="view-span">View</span>
+                                              </button>
+                                          </a>
+                                         
                                       </div>
-
                                   )
                               }
                           </>
