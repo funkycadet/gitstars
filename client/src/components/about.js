@@ -63,7 +63,7 @@ export const About = () => {
           <div className='flex flex-row justify-center items-center w-full space-x-2'>
             <img src={github} alt='Repository link' height="35px" width="35px" />
             <img src={link} alt='Icon link' height="35px" width="35px" />
-            <a href="https://github.com/funkycadet/gitstars" target="_blank" rel='noreferrer' className='text-xl'>
+            <a href="https://github.com/funkycadet/gitstars" target="_blank" rel='noreferrer' className='text-xl hover:underline hover:underline-offset-2'>
               Project Link
             </a>
           </div>
