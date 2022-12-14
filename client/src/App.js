@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/explore' element={<Explore/>}/>
-        <Route path='/explore/:id' element={<LanguageExplore/>}/>
+        <Route path='/explore/:lang' element={<LanguageExplore/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path="*" element={<Error/>}/>

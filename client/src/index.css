@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -184,26 +186,25 @@ body{
 }
 
 .bargraph-container {
-  height: 24em;
+  height: auto;
   width: 64%;
   padding: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 8rem;
 }
 
-
-.about-container{
-  margin-top: 4.2rem;
-  padding: 2rem;
-}
 
 .contact-container{
   margin-top: 4rem;
   padding: 2.4rem;
   height: 50rem;
   background-color: #edede9;
+  background-image: url("../src/images/contact_us.svg"), url("../src/images/personal_info.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom right, top 50px left;
 }
 
 #error-image{
@@ -256,4 +257,46 @@ body{
   padding: 0.5rem;
   font-size: 18px;
   margin-bottom: 3rem;
+}
+
+.about-container{
+  margin-top: 4rem;
+  padding: 4rem 0rem;
+  height: auto;
+}
+
+/* .about-style-container::before{
+  background-color: #edede9;
+  transform: rotate(-9deg);
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  top: -60%;
+  left: -50%;
+  z-index: -1;
+} */
+
+.italic-span{
+  font-style: italic;
+  padding: 0 0.6rem;
+  /* font-family: 'Kaushan Script', cursive; */
+  font-family: 'Marck Script', cursive;
+  color: #053BED;
+}
+
+.lang-loadercontainer{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding-top: 15%;
+}
+
+.list-container{
+  height: 6rem;
+  /* box-sizing: border-box; */
+}
+
+#view-span, #repo-name{
+  color:#053BED;
 }
