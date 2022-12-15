@@ -6,10 +6,16 @@ from server.app import app
 from flask import Flask, jsonify
 from flask_cors import CORS
 
-server = Flask(__name__)
+server = Flask(__name__, static_folder="./client/build", static_url_path="/")
 server.register_blueprint(app)
 CORS(server)
-server.config['CORS_HEADERS'] = 'Content-Type'
+server.config["CORS_HEADERS"] = "Content-Type"
+
+
+@server.route("/")
+def root():
+    return server.send_static_file("index.html")
+
 
 @server.errorhandler(404)
 def error404(error):
@@ -17,11 +23,5 @@ def error404(error):
     return jsonify({"error": "Not found"}), 404
 
 
-# @server.route("/")
-# def root():
-#     return "Welcome"
-
-
 if __name__ == "__main__":
     server.run(threaded=True)
-
