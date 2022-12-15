@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +8,7 @@
 
 body{
   height: auto;
+  width: 100%;
   box-sizing: content-box;
   font-family: 'Poppins', sans-serif;
 }
@@ -23,6 +26,7 @@ body{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 .header.shadow{
@@ -33,7 +37,6 @@ body{
 .navlinks > li {
   margin: 0rem 1rem 0rem 1rem;
   font-weight: 500;
-  font-size: 1.4rem;
 }
 
 .navlinks > li:hover{
@@ -53,7 +56,6 @@ body{
 }
 
 .hero-section{
-  background-image: url('./images/hero.svg');
   background-repeat: no-repeat;
   background-position: right;
   background-position-y: 90%;
@@ -79,6 +81,10 @@ body{
   height: 2rem;
   border-radius: 2.2rem;
   color: #ffffff;
+}
+
+.hero-image{
+  margin-left: 45%;
 }
 
 .explore-button{
@@ -130,9 +136,7 @@ body{
   color: #053BED;
 }
 
-.get-started > p {
- 
-}
+
 
 .feature-section{
   background: #053BED;
@@ -170,7 +174,139 @@ body{
 .graph-container{
   box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
   background-color:#fff;
-  height: 20em;
-  width: 20em;
-  border-radius: 2em;
+  height: 16em;
+  width: 16em;
+  border-radius: 1.6em;
+}
+
+.explore-container {
+  margin-top: 6rem;
+  padding: 2rem;
+  height: 82%;
+}
+
+.bargraph-container {
+  height: auto;
+  width: 64%;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8rem;
+}
+
+
+.contact-container{
+  margin-top: 4rem;
+  padding: 2.4rem;
+  height: 50rem;
+  background-color: #edede9;
+  background-image: url("../src/images/contact_us.svg"), url("../src/images/personal_info.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom right, top 50px left;
+}
+
+#error-image{
+  height: 18rem;
+}
+
+.form-container{
+  height: auto;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1rem;
+  padding: 2.6rem;
+}
+
+.submit-button{
+  background-color: #053BED;
+}
+.submit-button:hover{
+  opacity: 90%;
+}
+.contact-h1{
+  letter-spacing: 0.3rem;
+  color:#053BED;
+}
+
+.searchbar-container{
+  height: 13rem;
+  margin-top: 4rem;
+  width: 100%;
+  background-color: #edede9;
+  background-image: url("../src/images/explore_search1.svg"), url("../src/images/explore_search2.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top right, bottom left;
+}
+
+.search-bar{
+  width:55%;
+}
+
+.languagerepo-container{
+  width: 70%;
+  padding: 3rem;
+  margin: 4rem auto;
+}
+
+.previous-button{
+  background-color: #053BED;
+  width: 9rem;
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 18px;
+  margin-bottom: 3rem;
+}
+
+.about-container{
+  margin-top: 4rem;
+  padding: 4rem 0rem;
+  height: auto;
+}
+
+/* .about-style-container::before{
+  background-color: #edede9;
+  transform: rotate(-9deg);
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  top: -60%;
+  left: -50%;
+  z-index: -1;
+} */
+
+.italic-span{
+  font-style: italic;
+  padding: 0 0.6rem;
+  /* font-family: 'Kaushan Script', cursive; */
+  font-family: 'Marck Script', cursive;
+  color: #053BED;
+}
+
+.lang-loadercontainer{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding-top: 15%;
+}
+
+.list-container{
+  height: 6rem;
+  /* box-sizing: border-box; */
+}
+
+#view-span, #repo-name{
+  color:#053BED;
+}
+
+.reason-container{
+  background-color: #edede9;
+  margin: 4.2rem 0;
+  height: 30rem;
+}
+
+.footer-text{
+  color:#053BED;
 }
