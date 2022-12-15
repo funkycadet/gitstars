@@ -17,6 +17,8 @@ export const Explore = () => {
     let [allTopStarredRepos, setAllTopStarredRepos] = useState([]);
     let [loading, setLoading] = useState(true);
     let [searchTerm, setSearchTerm] = useState("");
+    let [emptyError, setEmptyError] = useState(false);
+    let [stringError, setStringError] = useState(false);
 
     const navigate = useNavigate();
 
@@ -52,8 +54,13 @@ export const Explore = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("You clicked submit!", searchTerm);
-        navigate(`/explore/${searchTerm}`);
+        console.log("You clicked submit!", searchTerm.length);
+        if (searchTerm.length <= 0 || searchTerm === undefined || typeof(searchTerm) !== 'string'){
+            setStringError(true);
+        }else{
+            navigate(`/explore/${searchTerm}`);
+        }
+       
     }
 
 
@@ -72,10 +79,14 @@ export const Explore = () => {
                           placeholder="Enter preferred programming language e.g Python, TypeScript, Javascript....."
                           onChange={(event)=> {
                             setSearchTerm(event.target.value);
-                          }}
-                          required/>
+                          }}/>
                             <button  onClick={handleSubmit} type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                          {
+                            stringError ? <p className='text-xs mt-2 absolute text-red-500 italic'>Please enter valid language i.e string value</p> : " "
+                          }
                       </div>
+
+
                   </form>
               </div>
               <div className='explore-container flex justify-center items-center'>
