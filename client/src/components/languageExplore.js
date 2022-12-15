@@ -25,7 +25,10 @@ export const LanguageExplore = () => {
                 setLoading(false);
                 // console.log(languageRepos);
             }
-        )
+        ).catch(error => {
+            console.log(error.response.data);
+            navigate("*");
+         })
     }
 
     const state = {
