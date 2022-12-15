@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b3241066.css",
-    "main.js": "/static/js/main.ea752884.js",
+    "main.css": "/static/css/main.085b68b7.css",
+    "main.js": "/static/js/main.3e66baed.js",
     "static/media/vodina-avatar-removebg.jpg": "/static/media/vodina-avatar-removebg.d1720c28fb9d2250f365.jpg",
     "static/media/eric-avatar-removebg.jpg": "/static/media/eric-avatar-removebg.84975253fbbc363597a8.jpg",
     "static/media/hero.svg": "/static/media/hero.7d99e882321f8a093fff1b3fdf55afe8.svg",
@@ -25,14 +25,14 @@
     "static/media/previous-svgrepo-com.svg": "/static/media/previous-svgrepo-com.cd9ff44790f20cb30126896e15482d75.svg",
     "static/media/icons8-github.svg": "/static/media/icons8-github.4cd3a2bc790226c346ae943ec1622139.svg",
     "static/media/pie-chart.svg": "/static/media/pie-chart.8c7150438d13bf126e4acf7ec1a29d2b.svg",
-    "index.html": "/index.html",
     "static/media/logo.svg": "/static/media/logo.800d240d375c2aa1178158917df99813.svg",
+    "index.html": "/index.html",
     "static/media/horizontal-line.svg": "/static/media/horizontal-line.4ecb94049220c332996a6cbfe367c8cf.svg",
-    "main.b3241066.css.map": "/static/css/main.b3241066.css.map",
-    "main.ea752884.js.map": "/static/js/main.ea752884.js.map"
+    "main.085b68b7.css.map": "/static/css/main.085b68b7.css.map",
+    "main.3e66baed.js.map": "/static/js/main.3e66baed.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3241066.css",
-    "static/js/main.ea752884.js"
+    "static/css/main.085b68b7.css",
+    "static/js/main.3e66baed.js"
   ]
 }
